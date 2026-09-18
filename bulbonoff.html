@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BULB</title>
+
+<style>
+
+    body {
+        text-align: center;
+        background-color:palevioletred;
+        font-family: Arial;
+        padding-top: 100px;
+    }
+
+    h1 {
+        color:black;
+    }
+
+    h2 {
+        color: cadetblue;
+        font-size: 40px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        color: white;
+        background-color:darkslategray;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color:violet;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<h1>click to on/off the bulb</h1>
+
+<h2 id="bulb">OFF</h2>
+
+<button onclick="on()">TURN ON</button>
+
+<button onclick="off()">TURN OFF</button>
+
+
+<script>
+
+    function on() {
+
+        document.getElementById("bulb").innerText = "💡😌";
+
+    }
+
+    function off() {
+
+        document.getElementById("bulb").innerText = "😵‍💫🥺";
+
+    }
+
+</script>
+
+</body>
+
+</html>
