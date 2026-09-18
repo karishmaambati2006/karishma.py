@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>login page</title>
+                <style>
+                    body {
+                         font-family:Arial; 
+                            background-color: lightblue;
+                             text-align: center;
+                            padding-top: 100px;  
+                    }
+                    h2 {
+                         color:black;
+                    }
+                    label { font-size: 18px; } 
+                    input {
+                         padding: 8px; border: 1px solid gray; border-radius: 5px; 
+                    }
+                    button {
+                         padding: 10px 25px; background-color:brown; color: white; border: none; border-radius: 5px; cursor: pointer;
+                      }
+                        button:hover {
+                             background-color:darkgreen;
+                         }
+                          #message {
+                             font-size: 18px; font-weight: bold;
+                            }
+                </style> 
+    </head>
+    <body>
+        <h2> Login web page</h2> 
+        <label>username:</label>
+        <input type ="text " id="username">
+        <br><br>
+        <label>"password"</label>
+        <input type =password id="password">
+        <br><br>
+        <button id = "loginbutton"> login</button>
+        <p id="message" ></p>
+        <script>
+        let username=document.getElementById("username");
+        let password=document.getElementById("password");
+        let loginbutton=document.getElementById("loginbutton");
+        let message=document.getElementById("message");
+        loginbutton.addEventListener("click",function(){
+            let user =username.value;
+            let pass= password.value;
+            if(user=="karishma"&&pass=="12345"){
+                localStorage.setItem("username",user);
+                message.innerHTML="login successful";
+                message.style.color="green";
+            }
+            else{
+                message.innerHTML="invalid login";
+                message.style.color="red";
+            }
+
+        });
+        </script>
+         
+
+    </body>    
+
+</html> 
